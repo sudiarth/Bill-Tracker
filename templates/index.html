@@ -14,4 +14,24 @@
         </div>
     </div>
 </form>
+
+<div class="row">
+    <div class="col-6">
+        Description
+    </div>
+    <div class="col-3">
+        Amount
+    </div>
+    {% for bill in all_bills %}
+        <div class="col-6">
+            {{ bill.description }}
+        </div>
+        <div class="col-3">
+            {{ bill.amount }}
+        </div>
+    {% endfor %}
+</div>
+
+
+
 {% endblock %}
