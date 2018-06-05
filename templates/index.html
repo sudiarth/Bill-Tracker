@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block body %}
 <h1>Bill Tracker</h1>
-<form>
+<form action="{{url_for('add_bill')}}" method="POST">
     <div class="form-group row">
         <div class="col-7">
-            <input type="text" class="form-control">
+            <input name="description" type="text" class="form-control">
         </div>
         <div class="col-2">
-            <input type="text" class="form-control">
+            <input name="amount" type="text" class="form-control">
         </div>
         <div class="col-auto">
             <button class="btn btn-primary">Add Bill</button>
