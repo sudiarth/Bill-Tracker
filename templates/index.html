@@ -19,18 +19,24 @@
     <div class="col-6">
         Description
     </div>
-    <div class="col-3">
+    <div class="col-3 text-right">
         Amount
     </div>
-    {% for bill in all_bills %}
-        <div class="col-6">
-            {{ bill.description }}
-        </div>
-        <div class="col-3">
-            {{ bill.amount }}
-        </div>
-    {% endfor %}
 </div>
+<hr>
+{% for bill in all_bills %}
+<div class="row mb-3">
+    <div class="col-6">
+        {{ bill.description }}
+    </div>
+    <div class="col-3 text-right">
+        {{ bill.amount }}
+    </div>
+    <div class="col-auto">
+        <a class="btn btn-sm btn-danger" href="{{url_for ('delete', bill_id=bill.id)}}">Delete</a>
+    </div>
+</div>
+{% endfor %}
 
 
 
