@@ -33,8 +33,11 @@
         {{ bill.amount }}
     </div>
     <div class="col-auto">
-        <a class="btn btn-sm btn-danger" href="{{url_for ('delete', bill_id=bill.id)}}">Delete</a>
+        <a class="btn btn-sm btn-warning" href="{{url_for ('edit', bill_id=bill.id)}}">Edit</a>
     </div>
+    <div class="col-auto">
+            <a class="btn btn-sm btn-danger" href="{{url_for ('delete', bill_id=bill.id)}}">Delete</a>
+        </div>
 </div>
 {% endfor %}
 
